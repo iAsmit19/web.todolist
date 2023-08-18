@@ -10,7 +10,9 @@ export const Main = () => {
     
     // Adding Task from Input Filed
     const handleChange = (event) => {
-        setNewTask(event.target.value);
+        event.target.value !== " " && setNewTask(event.target.value);
+        event.target.value !== "  " && setNewTask(event.target.value);
+        event.target.value !== "   " && setNewTask(event.target.value);
     };
     
     // Adding Task to the Task Array from the Add Button
@@ -33,6 +35,12 @@ export const Main = () => {
         setTask(newToDoList);
     };
 
+    // On Checked Task will be Cut
+    const [check, setCheck] = useState(false);
+    const checkHandle = () => {
+        check ? setCheck(false) : setCheck(true); 
+    };
+
     return (
         <div className="main">
             <div className="takeTask">
@@ -44,12 +52,12 @@ export const Main = () => {
                     return (
                         <div className="task">
                             <div className="taskInput">
-                                <input type="checkbox" />
+                                <input type="checkbox" onChange={checkHandle} />
                             </div>
                             <div className="division">
                             </div>
                             <div className="taskP">
-                                <p>{task}</p>
+                                <p style={{textDecoration: check ? "line-through" : "none", color: check && "rgb(135, 135, 135)"}}>{task}</p>
                             </div>
                             <div className="division">
                             </div>

@@ -4,10 +4,14 @@
     --accent1: rgb(57, 57, 57);
     --accent2: rgb(135, 135, 135);
     --accent3: rgb(120, 120, 120);
-    --color: rgb(243, 243, 243);
+    --color: rgb(239, 239, 239);
     --color-light: rgb(194, 194, 194);
     --color-dark: rgb(119, 119, 119);
     --color-inverted: rgb(10, 10, 10);
+}
+
+button {
+    user-select: none;
 }
 
 .main {
@@ -96,9 +100,9 @@
 .takeTask button:focus {
     outline: none;
     border: none;
-
-    background-color: var(--accent3);
-    color: var(--color-inverted);
+    
+    background-color: var(--accent0);
+    box-shadow: 0px 0px 50px 5px var(--accent0);
 }
 
 .showTask {
@@ -169,6 +173,12 @@
 
     text-overflow: ellipsis;
 }
+.task p:focus {
+    text-shadow: 0px 0px 4px var(--accent3);
+
+    outline: none;
+    border: none;
+}
 
 .delete {
     /* border: 1px solid white; */
@@ -192,6 +202,8 @@
 
     outline: none;
     border: none;
+
+    cursor: pointer;
 
     transition: all ease-in-out 400ms;
 }
