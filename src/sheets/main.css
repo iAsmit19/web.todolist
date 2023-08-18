@@ -1,0 +1,201 @@
+:root {
+    --bg: rgb(18, 18, 18);
+    --accent0: rgb(33, 33, 33);
+    --accent1: rgb(57, 57, 57);
+    --accent2: rgb(135, 135, 135);
+    --accent3: rgb(120, 120, 120);
+    --color: rgb(243, 243, 243);
+    --color-light: rgb(194, 194, 194);
+    --color-dark: rgb(119, 119, 119);
+    --color-inverted: rgb(10, 10, 10);
+}
+
+.main {
+    /* border: 1px solid white; */
+    
+    min-height: 100vh;
+    width: 70vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+}
+
+.takeTask {
+    /* border: 1px solid white; */
+    
+    width: 60vw;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.takeTask input {
+    background-color: var(--accent1);
+    color: var(--color);
+
+    border: none;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    
+    padding: 0.7rem;
+    padding-inline: 1.5rem;
+
+    width: 55vw;
+
+    user-select: none;
+
+    font-size: 1em;
+
+    transition: all ease-in-out 400ms;
+}
+
+.takeTask input::placeholder {
+    color: var(--color-dark);
+
+    transition: all ease-in-out 400ms;
+}
+.takeTask input:focus::placeholder {
+    color: var(--color);
+}
+
+.takeTask input:focus {
+    box-shadow: 0px 0px 50px 5px var(--accent0);
+    
+    outline: none;
+    border: none;
+}
+
+.takeTask button {
+    background-color: var(--accent1);
+    color: var(--color);
+    
+    border: none;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+
+    padding: 0.7rem;
+
+    font-size: 1em;
+    font-weight: 600;
+
+    cursor: pointer;
+    z-index: 1;
+    user-select: none;
+
+    transition: all ease-in-out 400ms;
+}
+.takeTask button:hover {
+    background-color: var(--accent0);
+    color: var(--color);
+    box-shadow: 0px 0px 50px 5px var(--accent0);
+}
+.takeTask button:focus {
+    outline: none;
+    border: none;
+
+    background-color: var(--accent3);
+    color: var(--color-inverted);
+}
+
+.showTask {
+    /* border: 1px solid white; */
+
+    min-height: 80vh;
+    width: 70vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+}
+
+.task {
+    color: var(--color);
+    
+    /* border: 1px solid white; */
+
+    width: 70vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 5vw; */
+
+    font-size: 1.2em;
+}
+
+.taskInput {
+    /* border: 1px solid white; */
+    
+    padding: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-inline: 2vw;
+    margin-left: 3vw;
+}
+
+.task input {
+    width: 2vw;
+    height: 2vh;
+}
+
+.division {
+    background-color: var(--accent2);
+
+    height: 2vh;
+    width: 1px;
+}
+
+.taskP {
+    /* border: 1px solid white; */
+
+    height: 5vh;
+    min-width: 30vw;
+
+    padding: 1rem;
+
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+
+    text-overflow: ellipsis;
+}
+
+.delete {
+    /* border: 1px solid white; */
+    
+    padding: 1rem;
+
+    margin-inline: 2vw;
+    margin-right: 3vw;
+}
+
+.delete button {
+    background-color: var(--accent1);
+    color: var(--color);
+    
+    padding: 0.6rem;
+    padding-inline: 1rem;
+
+    border-radius: 0.3rem;
+
+    font-weight: 600;
+
+    outline: none;
+    border: none;
+
+    transition: all ease-in-out 400ms;
+}
+.delete button:hover {
+    background-color: var(--accent0);
+    box-shadow: 0px 0px 30px 1px var(--accent0);
+}
