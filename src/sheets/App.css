@@ -11,6 +11,7 @@ html {
     width: 100vw;
     
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -29,7 +30,7 @@ html {
 body {
     background-color: var(--bg);
 
-    min-height: 110vh;
+    min-height: 10vh;
     width: 100vw;
 
     padding: 0;
