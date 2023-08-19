@@ -37,8 +37,10 @@ export const Main = () => {
 
     // On Checked Task will be Cut
     const [check, setCheck] = useState(false);
-    const checkHandle = () => {
+    const checkHandle = (task) => {
         check ? setCheck(false) : setCheck(true); 
+        return (
+            <p style={{textDecoration: check ? "line-through" : "none", color: check && "rgb(135, 135, 135)"}}>{task}</p>);
     };
 
     return (
@@ -52,12 +54,12 @@ export const Main = () => {
                     return (
                         <div className="task">
                             <div className="taskInput">
-                                <input type="checkbox" onChange={checkHandle} />
+                                <input type="checkbox" onChange={() => checkHandle(task)} />
                             </div>
                             <div className="division">
                             </div>
                             <div className="taskP">
-                                <p style={{textDecoration: check ? "line-through" : "none", color: check && "rgb(135, 135, 135)"}}>{task}</p>
+                                <p>{task}</p>
                             </div>
                             <div className="division">
                             </div>
